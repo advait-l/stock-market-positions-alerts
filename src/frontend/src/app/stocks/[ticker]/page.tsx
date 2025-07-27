@@ -34,12 +34,12 @@ async function getStockDetails(ticker: string): Promise<StockDetails> {
     return res.json();
 }
 
-export default function StockDetailsPage({
+export default async function StockDetailsPage({
     params,
 }: {
-    params: { ticker: string };
+    params: Promise<{ ticker: string }>;
 }) {
-    const { ticker } = params;
+    const { ticker } = await params;
     const {
         data: stock,
         error,
