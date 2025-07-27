@@ -1,0 +1,13 @@
+Before implementing any new feature, always update the relevant documents in the `docs/` folder to reflect the changes. This includes:
+
+- [docs/project_requirements.md](mdc:docs/project_requirements.md)
+- [docs/tech_stack.md](mdc:docs/tech_stack.md)
+- [docs/technical_specs.md](mdc:docs/technical_specs.md)
+- [docs/implementation_design.md](mdc:docs/implementation_design.md)
+
+This ensures that the project documentation is always up-to-date with the latest changes.
+description:
+globs:
+alwaysApply: false
+
+---
