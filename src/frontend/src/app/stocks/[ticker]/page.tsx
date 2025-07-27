@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import { useQuery } from "@tanstack/react-query";
 import {
     Card,
@@ -34,12 +35,12 @@ async function getStockDetails(ticker: string): Promise<StockDetails> {
     return res.json();
 }
 
-export default async function StockDetailsPage({
+export default function StockDetailsPage({
     params,
 }: {
     params: Promise<{ ticker: string }>;
 }) {
-    const { ticker } = await params;
+    const { ticker } = use(params);
     const {
         data: stock,
         error,
