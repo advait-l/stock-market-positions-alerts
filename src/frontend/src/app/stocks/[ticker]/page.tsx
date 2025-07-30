@@ -8,6 +8,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import { apiEndpoints } from "@/lib/api";
 
 type StockDetails = {
     description: {
@@ -28,7 +29,7 @@ type StockDetails = {
 };
 
 async function getStockDetails(ticker: string): Promise<StockDetails> {
-    const res = await fetch(`http://localhost:8000/api/stocks/${ticker}`);
+    const res = await fetch(apiEndpoints.stockDetails(ticker));
     if (!res.ok) {
         throw new Error("Network response was not ok");
     }

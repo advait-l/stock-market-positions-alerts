@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
+import { apiEndpoints } from "@/lib/api";
 
 type Stock = {
   ticker: string;
@@ -29,7 +30,7 @@ type Stock = {
 };
 
 async function getStocks(): Promise<Stock[]> {
-  const res = await fetch("http://localhost:8000/api/stocks");
+  const res = await fetch(apiEndpoints.stocks);
   if (!res.ok) {
     throw new Error("Network response was not ok");
   }
