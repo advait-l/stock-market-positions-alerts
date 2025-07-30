@@ -6,6 +6,10 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
+    "https://localhost:3000",
+    "https://*.vercel.app",
+    "https://*.netlify.app",
+    # Add your production domain here
 ]
 
 app.add_middleware(
@@ -21,3 +25,7 @@ app.include_router(stocks.router, prefix="/api")
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the Stock Market Positions Alerts API"}
+
+# Vercel handler function
+def handler(request, response):
+    return app

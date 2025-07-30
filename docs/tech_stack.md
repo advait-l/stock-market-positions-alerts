@@ -35,5 +35,6 @@ This document outlines the technology stack for the Stock Market Positions Alert
 ## 6. Deployment
 
 - **Frontend:** Vercel
-- **Backend:** Docker, Kubernetes on AWS
-- **Rationale:** The frontend will be deployed on Vercel for its seamless integration with Next.js. The backend services will be containerized using Docker and orchestrated with Kubernetes on AWS for scalability and reliability.
+- **Backend:** Google Cloud Run (serverless containers)
+- **Database:** InfluxDB Cloud (managed service)
+- **Rationale:** The frontend will be deployed on Vercel for its seamless integration with Next.js. The backend will be deployed on Google Cloud Run for simplicity and automatic scaling without the complexity of managing Kubernetes. InfluxDB Cloud provides a managed time-series database solution.

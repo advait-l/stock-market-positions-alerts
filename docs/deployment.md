@@ -2,6 +2,8 @@
 
 This document outlines the deployment process for both the frontend and backend of the Stock Market Positions Alerts application.
 
+> **📝 Note**: For the simplest cloud deployment setup, see [Simple Cloud Deployment Guide](./simple_cloud_deployment.md) which covers Google Cloud Run + InfluxDB Cloud deployment.
+
 ## Backend Deployment (Python/Flask)
 
 The backend is a Python application, likely using a framework like Flask or FastAPI.

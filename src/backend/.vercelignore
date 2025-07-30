@@ -1,0 +1,43 @@
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Development files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+README.md
+*.md
+
+# Docker files (not needed for Vercel)
+Dockerfile
+docker-compose.yml
+
+# Testing
+tests/
+test_*.py
+*_test.py
+
+# Git
+.git/
+.gitignore 
